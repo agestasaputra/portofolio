@@ -1,0 +1,116 @@
+html
+{
+	position: relative;		/*TRIK UNTUK MEMBUAT FOOTER STATIC DIBAWAH*/
+}
+
+body
+{
+	margin-bottom: 100px;	/*Ini disesuaikan dengan tinggi footernya, agar akhir body tidak bertabrakan dgn footernya*/
+	margin-top: 40px;
+}
+
+.navbar
+{
+	
+}
+
+.jumbotron
+{
+	height: 500px;
+	margin-bottom: 0;
+	background-image: url('../img/22.jpg');
+	background-attachment: fixed;		/*Agar posisi gambarnya fixed, tidak bergerak ketika di scroll*/ 
+	background-size: cover;				/*Agar posisi gambarnya dapat ditampilkan seutuhnya*/
+	background-position: 0 -250px;		/* __,__,__,__ horizontal dan vertical */
+	overflow: hidden;
+}	
+
+.jumbotron h1, .jumbotron p
+{
+	text-shadow: 3px 3px 2px #777; 		/*(kekanan, kebawah, blur, warna)*/
+}
+
+.jumbotron img
+{
+	width: 300px;
+	border: 4px solid #444;
+	box-shadow: 3px 3px 2px #777; 		/*(kekanan, kebawah, blur, warna)*/
+}
+
+section
+{
+	min-height: 600px;					/*Agar tiap section atau bagian mempunyai tinggi minimal*/
+}
+
+.container
+{
+	/*border: 2px solid red;*/
+}
+
+.about
+{
+	min-height: 400px;
+}
+
+.pKiri, .pKanan
+{
+	opacity: 0;
+	transform: translate(-50px, 0);
+	transition: 1s;
+}
+
+.pKiri.pMuncul, .pKanan.pMuncul
+{
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+.pKanan
+{
+	transform: translate(50px, 0);
+}
+
+.portofolio
+{
+	background-color: #ddd;
+}
+
+.portofolio .thumbnail
+{	
+	opacity: 0;
+	transform: translate(0, -40px);		/*translate(kebawah, keatas, kekiri, kekanan)*/
+}
+
+.portofolio .thumbnail.muncul			/*Jika ada class thumbnail dan class muncul ada sewaktu2 didalam portofolio*/
+{
+	opacity: 1;
+	transform: translate(0, 0);		/*translate(kebawah, keatas, kekiri, kekanan)*/
+	transition: 1s;
+}
+
+.contact
+{
+	min-height: 600px;
+}
+
+hr
+{
+	width: 250px;
+	border: 1px solid #444;
+} 
+
+footer
+{
+	padding-top: 3.5%;
+	background-color: #333;
+	color: #aaa;
+	position: absolute;
+	bottom: 0;    							/*SUPAYA FOOTER NYA NEMPEL DIBAWAH*/
+	width: 100%;
+	min-height: 50px;
+}
+
+footer p
+{
+	font-size: 1em;
+}
